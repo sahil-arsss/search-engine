@@ -1,1 +1,1 @@
-Python is a powerful programming language.
+Python is a popular programming language used for web development, data science, machine learning, and automation. It is easy to learn and widely used in industry.

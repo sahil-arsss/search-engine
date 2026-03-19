@@ -1,1 +1,1 @@
-Search engines use indexing to improve speed.
+Machine learning allows computers to learn from data and make predictions. Python is widely used in machine learning because of its powerful libraries and simplicity.

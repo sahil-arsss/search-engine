@@ -4,7 +4,7 @@ from config import DEBUG
 from preprocessing.processor import preprocess_text
 from data.loader import load_documents
 from indexing.inverted_index import build_inverted_index, save_index, load_index
-
+from query_engine.search import search
 
 test_cases = [
     None,
@@ -47,21 +47,21 @@ def initialize_system():
 
 
 def run_search_engine():
-    """
-    Entry point for running search engine.
-    """
     print("Mini Search Engine Started 🚀")
-    
+
     while True:
         query = input("\nEnter your search query (or type 'exit'): ")
-        
+
         if query.lower() == "exit":
             print("Exiting search engine...")
             break
-        
-        # Placeholder (will connect later)
-        print(f"Searching for: {query}")
-        print("Results will appear here...")
+
+        results = search(query, inverted_index)
+
+        if not results:
+            print("No results found ❌")
+        else:
+            print(f"Found in documents: {results}")
 
 if __name__ == "__main__":
     initialize_system()
